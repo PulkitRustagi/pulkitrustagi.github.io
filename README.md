@@ -1,1 +1,0 @@
-# pulkitrustagi.github.io
