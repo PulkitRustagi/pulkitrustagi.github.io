@@ -7,6 +7,49 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+
+    <!-- Add a style block for progress bar styling -->
+    <style>
+        progress {
+            width: row;
+            height: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            /* Set a default background color (e.g., green) */
+            background-color: #2ecc71; /* Dark Green */
+        }
+
+        /* Set the background color dynamically based on the progress value */
+        progress::-webkit-progress-value {
+            background-color: var(--progress-color, #2ecc71); /* Dark Green by default */
+            border-radius: 5px;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: #ccc;
+            border-radius: 5px;
+        }
+    </style>
+
+    <!-- Add a script block to set the progress bar color dynamically -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all progress elements on the page
+            const progressBars = document.querySelectorAll("progress");
+
+            // Iterate through each progress element
+            progressBars.forEach(function (progressBar) {
+                // Get the current progress value
+                const progressValue = progressBar.value;
+
+                // Calculate the hue value for the color gradient (from red to dark green)
+                const hue = (progressValue / 100) * 120;
+
+                // Set the custom property value for the progress color with a darker green
+                progressBar.style.setProperty("--progress-color", `hsl(${hue}, 100%, 40%)`);
+            });
+        });
+    </script>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -105,22 +148,24 @@
           </div>
           <div class="text-container">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+              Hello! I'm Pulkit Rustagi, a second-year Ph.D. student in Robotics at Oregon State University, 
+              where I contribute to the <a href="https://www.sandhyasai.com/group" target="_blank">Intelligent and Reliable Autonomous Systems</a> research group under 
+              the mentorship of <a href="https://www.sandhyasai.com/" target="_blank">Dr. Sandhya Saibubramanian</a>. 
+              My primary focus is on Safe Reinforcement Learning, 
+              particularly addressing and mitigating negative side effects in multi-agent systems that are discovered after deployment. 
+              I also have research experience in field of controls, localization, and motion planning, I've implemented 
+              real-time solutions on UAVs and AGVs, utilizing technologies like Pixhawk and Ardupilot. 
+              My passion lies in bridging theoretical research with practical application in the field of autonomous robotics
             </p>
           </div>
         </div>
       </div>
-      <img
+      <!-- <img
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#experience'"
-      />
+      /> -->
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
@@ -128,7 +173,7 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Project Skills</h2>
             <div class="article-container">
               <article>
                 <img
@@ -137,8 +182,9 @@
                   class="icon"
                 />
                 <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
+                  <h3>RL</h3>
+                  <p>Expert</p>
+                  <progress value="100" max="100"></progress>
                 </div>
               </article>
               <article>
@@ -148,8 +194,9 @@
                   class="icon"
                 />
                 <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
+                  <h3>MARL</h3>
+                  <p>Advanced</p>
+                  <progress value="90" max="100"></progress>
                 </div>
               </article>
               <article>
@@ -159,8 +206,9 @@
                   class="icon"
                 />
                 <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
+                  <h3>Localization</h3>
+                  <p>Expert</p>
+                  <progress value="100" max="100"></progress>
                 </div>
               </article>
               <article>
@@ -170,8 +218,9 @@
                   class="icon"
                 />
                 <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
+                  <h3>SLAM</h3>
+                  <p>Proficient</p>
+                  <progress value="80" max="100"></progress>
                 </div>
               </article>
               <article>
@@ -181,8 +230,9 @@
                   class="icon"
                 />
                 <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
+                  <h3>Planning</h3>
+                  <p>Advanced</p>
+                  <progress value="90" max="100"></progress>
                 </div>
               </article>
               <article>
@@ -192,14 +242,15 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
+                  <h3>Hardware</h3>
+                  <p>Advanced</p>
+                  <progress value="90" max="100"></progress>
                 </div>
               </article>
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Softwares</h2>
             <div class="article-container">
               <article>
                 <img
@@ -208,8 +259,9 @@
                   class="icon"
                 />
                 <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
+                  <h3>ROS</h3>
+                  <p>Advanced</p>
+                  <progress value="90" max="100"></progress>
                 </div>
               </article>
               <article>
@@ -219,8 +271,9 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
+                  <h3>Gazebo</h3>
+                  <p>Advanced</p>
+                  <progress value="90" max="100"></progress>
                 </div>
               </article>
               <article>
@@ -230,8 +283,9 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
+                  <h3>Github</h3>
+                  <p>Expert</p>
+                  <progress value="100" max="100"></progress>
                 </div>
               </article>
               <article>
@@ -241,20 +295,98 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
+                  <h3>Latex</h3>
+                  <p>Expert</p>
+                  <progress value="100" max="100"></progress>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Simulink</h3>
+                  <p>Expert</p>
+                  <progress value="100" max="100"></progress>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Rviz</h3>
+                  <p>Expert</p>
+                  <progress value="100" max="100"></progress>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Programming</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Expert</p>
+                  <progress value="100" max="100"></progress>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C/C++</h3>
+                  <p>Advanced</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Julia</h3>
+                  <p>Advanced</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Matlab</h3>
+                  <p>Expert</p>
+                  <progress value="100" max="100"></progress>
                 </div>
               </article>
             </div>
           </div>
         </div>
       </div>
-      <img
+      <!-- <img
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
-      />
+      /> -->
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
@@ -277,12 +409,12 @@
               >
                 Github
               </button>
-              <button
+              <!-- <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/'"
               >
                 Live Demo
-              </button>
+              </button> -->
             </div>
           </div>
           <div class="details-container color-container">
@@ -301,12 +433,12 @@
               >
                 Github
               </button>
-              <button
+              <!-- <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/'"
               >
                 Live Demo
-              </button>
+              </button> -->
             </div>
           </div>
           <div class="details-container color-container">
@@ -325,22 +457,22 @@
               >
                 Github
               </button>
-              <button
+              <!-- <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/'"
               >
                 Live Demo
-              </button>
+              </button> -->
             </div>
           </div>
         </div>
       </div>
-      <img
+      <!-- <img
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
-      />
+      /> -->
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
@@ -352,7 +484,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">rustagi.pulkit@gmail.com</a></p>
+          <p><a href="mailto:examplemail@gmail.com">rustagip@oregonstate.edu</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -375,7 +507,7 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 Pulkit Rustagi. All Rights Reserved.</p>
+      <p>Copyright &#169; 2023 Pulkit Rustagi. All Rights Reserved.(From ) </p>
     </footer>
     <script src="script.js"></script>
   </body>
