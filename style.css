@@ -420,6 +420,22 @@ article .icon {
   height: 2.5rem;
 }
 
+/* PUBLICATIONS SECTION */
+
+#publications {
+  position: relative;
+}
+
+.publications-container {
+  margin: 6rem 2rem 0; /* Adjust the margin as needed */
+}
+
+.publication {
+  margin-bottom: 2rem; /* Adjust the margin as needed */
+  color: black;
+}
+
+
 /* FOOTER SECTION */
 
 footer {
