@@ -56,8 +56,8 @@
       <div class="logo">Pulkit Rustagi</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <!-- <li><a href="#experience">Experience</a></li> -->
           <li><a href="#projects">Projects</a></li>
           <li><a href="#publications">Publications</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -114,18 +114,18 @@
           />
         </div>
       </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+     <!-- </section>
+    <section id="about"> -->
+     <!-- <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title"></h1> -->
       <div class="section-container">
-        <div class="section__pic-container">
+        <!-- <div class="section__pic-container">
           <img
             src="./assets/about-pic.png"
             alt="Profile picture"
             class="about-pic"
           />
-        </div>
+        </div> -->
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
@@ -135,7 +135,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>Reinforcement Learning <br /> Safety in Multi-Agent Systems <br />Localization and Mapping <br />Dynamics and Controls</p>
+              <p>Reinforcement Learning <br /> Multi-Agent Planning <br /> Safety in Planning<br />Localization and Mapping</p>
             </div>
             <div class="details-container">
               <img
@@ -147,27 +147,26 @@
               <p> PhD Candidate in Robotics <br />  M.S. Masters in Aerospace <br /> B.Tech. Bachelors in Aerospace </p>
             </div>
           </div>
-          <div class="text-container">
-            <p>
-              Hello! I'm Pulkit Rustagi, a second-year Ph.D. student in Robotics at Oregon State University, 
-              where I contribute to the <a href="https://www.sandhyasai.com/group" target="_blank">Intelligent and Reliable Autonomous Systems</a> research group under 
-              the mentorship of <a href="https://www.sandhyasai.com/" target="_blank">Dr. Sandhya Saibubramanian</a>. 
-              My primary focus is on Safe Reinforcement Learning, 
-              particularly addressing and mitigating safety concerns in multi-agent systems that are discovered after deployment. 
-              I also have research experience in field of controls, localization, and motion planning, I've implemented 
-              real-time solutions on UAVs and AGVs, utilizing technologies like Pixhawk and Ardupilot. 
-              My passion lies in bridging theoretical research with practical application in the field of autonomous robotics
-            </p>
+            <div class="text-container">
+              <p>
+                I'm third-year Ph.D. student in Robotics at Oregon State University, 
+                where I contribute to the <a href="https://www.sandhyasai.com/group" target="_blank">Intelligent and Reliable Autonomous Systems</a> research group under 
+                the mentorship of <a href="https://www.sandhyasai.com/" target="_blank">Dr. Sandhya Saibubramanian</a>. 
+                My primary focus is on improve safety in autonomous robots when they are modeled as Reinforcement Learning agents. I also have research experience in field of controls, localization, and motion planning, I've implemented 
+                real-time solutions on UAVs and AGVs, utilizing technologies like Pixhawk and Ardupilot. 
+                My passion lies in bridging theoretical research with practical application in the field of autonomous robotics.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+
       <!-- <img
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#experience'"
       /> -->
-    </section>
+    <!-- </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
@@ -381,7 +380,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -393,6 +392,40 @@
 
   </section> -->
     </section>
+
+  <section id="publications">
+    <h1 class="title">Publications</h1>
+    <div class="publications-container">
+      <ul>
+        <!-- 1. -->
+        <li class="publication">
+          <h3><a href="#publications">
+            Multi-Objective Planning with Contextual Lexicographic Reward Preferences</a></h3>
+          <p>Pulkit Rustagi, Yashwanthi Anand, and Sandhya Saisubramanian. 
+            Submitted to the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2025.
+        </li>
+        <!-- 2. -->
+        <li class="publication">
+          <h3><a href="https://arxiv.org/pdf/2405.04702" target="_blank">
+            Mitigating Negative Side Effects in Multi-Agent Systems Using Blame Assignment</a></h3>
+          <p>Pulkit Rustagi and Sandhya Saisubramanian. 
+            Submitted to the 41st IEEE International Conference on Robotics and Automation (ICRA), 2025.</p>
+          <h3><a href="https://pulkitrustagi.github.io/recon-project/" target="_blank">
+            - Project Page</a></h3>
+        </li>
+        <!-- 3. -->
+        <li class="publication">
+          <h3><a href="https://doi.org/10.1109/IROS.2018.8594512" target="_blank">
+            Recovery Control for Quadrotor UAV Colliding with a Pole</a></h3>
+            <p>Gareth Dicker, Inna Sharf, and Pulkit Rustagi. 
+              In Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2018.</p>
+        </li>
+        <!-- Add more <li> items for each publication -->
+      </ul>
+    </div>
+
+</section>
+
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -526,39 +559,6 @@
   <section id="publications123">
 
   </section>
-
-  <section id="publications">
-    <h1 class="title">Publications</h1>
-    <div class="publications-container">
-      <ul>
-        <!-- 1. -->
-        <li class="publication">
-          <h3><a href="#publications">
-            Multi-Objective Planning with Contextual Lexicographic Reward Preferences</a></h3>
-          <p>Pulkit Rustagi, Yashwanthi Anand, and Sandhya Saisubramanian. 
-            Submitted to the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2025.
-        </li>
-        <!-- 2. -->
-        <li class="publication">
-          <h3><a href="https://arxiv.org/pdf/2405.04702" target="_blank">
-            Mitigating Negative Side Effects in Multi-Agent Systems Using Blame Assignment</a></h3>
-          <p>Pulkit Rustagi and Sandhya Saisubramanian. 
-            Submitted to the 41st IEEE International Conference on Robotics and Automation (ICRA), 2025.</p>
-          <h3><a href="https://pulkitrustagi.github.io/recon-project/" target="_blank">
-            - Project Page</a></h3>
-        </li>
-        <!-- 3. -->
-        <li class="publication">
-          <h3><a href="https://doi.org/10.1109/IROS.2018.8594512" target="_blank">
-            Recovery Control for Quadrotor UAV Colliding with a Pole</a></h3>
-            <p>Gareth Dicker, Inna Sharf, and Pulkit Rustagi. 
-              In Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2018.</p>
-        </li>
-        <!-- Add more <li> items for each publication -->
-      </ul>
-    </div>
-
-</section>
 
 
     <section id="contact">
